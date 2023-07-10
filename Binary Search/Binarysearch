@@ -11,5 +11,5 @@ while(start<=mid){    //🟩🟩In searching <= else in other cases as wanted
 //For count of element = 2nd loop for last occurence - 1st loop for 1st occurence
 
 
-🤦‍♂️start=left,end=right
+👉 start=left,end=right
 
