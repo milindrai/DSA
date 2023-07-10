@@ -3,9 +3,13 @@ int start =0,end=n-1;
 int first=-1;
 while(start<=mid){    //🟩🟩In searching <= else in other cases as wanted
     int mid= start+ (end-start)/2
-    if(x=arr[mid]){ res=mid; end=mid-1;} //For last occurence res=mid; start=mid+1;    
-    else if(x<arr[mid])end=mid-1;
+    if(target=arr[mid]){ res=mid; end=mid-1;} //For last occurence res=mid; start=mid+1;    
+    else if(target<arr[mid])end=mid-1;
     else start=start+1;
 }
 
 //For count of element = 2nd loop for last occurence - 1st loop for 1st occurence
+
+
+🤦‍♂️start=left,end=right
+
