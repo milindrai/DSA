@@ -12,7 +12,7 @@ vector<int> findDiagonalOrder(vector<vector<int>>& matrix) {
         for(int i=0;i<m+n-1;i++){
             if(i%2==1)               // This if is for alternating directions , if(i%2==1) travese diagonal from bottom to up otherwise top to bottom
             for(int j=i;j>=0;j--){
-                   if(j<n&&i-j<m)
+                   if(j<n && (i-j)<m)
                    v.push_back(matrix[i-j][j]);
             }
             else
