@@ -17,7 +17,7 @@ vector<int> findDiagonalOrder(vector<vector<int>>& matrix) {
             }
             else
             for(int j=i;j>=0;j--){
-                    if(j<m&&(i-j)<n)
+                    if(j<m && (i-j)<n)
                        v.push_back(matrix[j][i-j]);
             }
             
