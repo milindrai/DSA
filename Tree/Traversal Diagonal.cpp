@@ -1,23 +1,23 @@
 // Diagonal clockwise(upperLeft to LowerRight) and anticlock(upperRight to LowerLeft)wise Order Traversal BFS
-// Iterative: // NOTE : ONLY BFS SOLUTION likE dijkstra since dfs will take onlogn.No required to read it.
+// Iterative: // NOTE : ONLY BFS SOLUTION likE dijkstra since dfs will take o(nlogn).No required to study that.
 Clockwise:
 void diagonal(Node* root){
-    vector<vector<int>> result;
+    vector<vector<int>> ans;
     if(!root)return;
     queue<Node*> q;
     q.push(root);
     while(q.size()){
-        int size = q.size();
-        vector<int> answer;
-        while(size--){
-            Node* temp = q.front();
+        int sizee = q.size();
+        vector<int> temp;
+        while(sizee--){
+            Node* c = q.front();
             q.pop();
-            while(temp){
-                answer.push_back(temp->data);
-                if(temp->left)q.push(temp->left);  //if(temp->right)q.push(temp->right);  For anticlockwise
-                temp = temp->right;                //temp=temp->left;                     For anticlockwise
+            while(c){
+                temp.push_back(c->data);
+                if(c->left)q.push(c->left);  //if(temp->right)q.push(temp->right);  For anticlockwise
+                c = c->right;                //temp=temp->left;                     For anticlockwise
             }
         }
-        result.push_back(answer);
+        ans.push_back(temp);
     }
 }
