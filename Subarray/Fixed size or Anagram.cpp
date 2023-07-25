@@ -39,8 +39,8 @@ vector<int> findAnagrams(string s, string p) {
 
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         int n = nums.size();
-		vector<int> res;
-        deque<int> mq;              // Here deque store index not value
+	vector<int> res;
+        deque<int> mq;              // Here deque(double ended queue) store index not value
     
         for(int i=0;i<k;i++){
             while(mq.size() && nums[mq.back()] < nums[i]) mq.pop_back();   // pop if back is lesser than new element i,e nums[i]
