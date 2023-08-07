@@ -38,7 +38,6 @@ vector<int> findAnagrams(string s, string p) {
 // tc=0(2*n)=o(n)  because deque takes o(1) in pop and push of first and last element unlike vector/array which take o(n) in pushing & pop first element
 
 vector<int> maxSlidingWindow(vector<int>& nums, int k) {
-        int n = nums.size();
 	vector<int> res;
         deque<int> mq;              // Here deque(double ended queue) store index not value
     
@@ -48,7 +47,7 @@ vector<int> maxSlidingWindow(vector<int>& nums, int k) {
         }
         res.push_back(nums[mq.front()]);   // mq.front () always have maximum value of that window & we will maintain this in next loop
         
-        for (int i=k; i<n; i++) {
+        for (int i=k; i<nums.size(); i++) {
             if (mq.size() && mq.front() <= i-k) mq.pop_front();      //pop if it is previous window's 1st element i,e it cant be part of current window
             while (mq.size() && nums[mq.back()] < nums[i]) mq.pop_back();   // pop if back is lesser than new element i,e nums[i]
             mq.push_back(i);  
