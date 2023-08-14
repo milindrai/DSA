@@ -24,4 +24,4 @@ int countSquares(vector<vector<int>>& matrix) {
 
 //matrix[i-1][j] -upper row
 //matrix[i][j-1] -previous column
-//matrix[i-1][j-1] -diaginal
+//matrix[i-1][j-1] -diagonal
